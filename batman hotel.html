@@ -1,0 +1,653 @@
+<html lang="en">
+<head>
+<title>🏨 HOTEL BATMAN</title>
+<style>
+
+
+body {
+    margin: 0;
+    background: black;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+  }
+
+  div.gallery {
+    margin: 10px;
+    border: 2px solid yellow;
+    float: left;
+    width: 185px;
+    background-color: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #f1c40f;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  div.gallery:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px yellow;
+    border: 2px solid #f1c40f;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: 25%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  #gallery-section {
+    clear: both;
+    padding: 50px 20px;
+    background: black;
+  }
+
+  #gallery-section h2 {
+    text-align: center;
+    color: yellow;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  body {
+    margin:0;
+    background:black;
+    font-family:'Segoe UI',sans-serif;
+    color:white;
+  }
+  .logo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.logo img {
+  width: 150px;
+  opacity: 0;
+  transform: scale(0.5) rotate(-30deg);
+  animation:
+    logoFlyIn 1.8s ease-out forwards,  /* runs once and stays */
+    glowPulse 2s ease-in-out infinite 2s;  /* soft glow loop starts after */
+  filter: drop-shadow(0 0 0 yellow);
+}
+
+
+  h1 { text-align:center; margin:10px 0 20px; font-size:40px; letter-spacing:3px; color:yellow; }
+  nav {
+    background:#111;
+    border-top:2px solid yellow;
+    border-bottom:2px solid yellow;
+  }
+  nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+  }
+  nav li {
+    position:relative;
+  }
+  nav li a {
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    font-size:16px;
+    transition:0.3s;
+  }
+  nav li a:hover {
+    background:yellow;
+    color:black;
+  }
+  nav li ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#222;
+    border:1px solid yellow;
+    min-width:160px;
+    z-index:10;
+  }
+  nav li:hover ul {
+    display:block;
+  }
+  nav li ul li a {
+    padding:12px 16px;
+  }
+ @keyframes logoFlyIn {
+  0% {
+    transform: scale(0.2) rotate(-90deg);
+    opacity: 0;
+    filter: drop-shadow(0 0 0 yellow);
+  }
+  60% {
+    transform: scale(1.1) rotate(10deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 30px yellow);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 15px yellow);
+  }
+}
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px orange);
+  }
+}
+.split-offers {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+.batman-offer, .joker-offer {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.batman-offer {
+  background-image:url("batmanoffer.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  border-right: 2px solid yellow;
+}
+
+.joker-offer {
+  background-image:url("jokeroffer.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #1a001a;
+}
+
+.split-offers h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: yellow;
+}
+
+.split-offers p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.split-offers span {
+  color: #39ff14;
+  font-weight: bold;
+}
+
+.split-offers a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: yellow;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.2s;
+}
+
+.split-offers a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #fff700;
+}
+.location-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #111;
+  color: white;
+  align-items: center;
+  gap: 20px;
+}
+.location-section iframe {
+  flex: 1;
+  min-width: 300px;
+  height: 470px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+}
+.location-info {
+  flex: 1;
+  min-width: 250px;
+}
+.location-info h2 {
+  color: yellow;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.location-info p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+.location-info blockquote {
+  margin-top: 20px;
+  color: #39ff14;
+  font-style: italic;
+  border-left: 4px solid yellow;
+  padding-left: 15px;
+}
+.bat-search-wrapper {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px yellow;
+    position: relative;
+    z-index: 99;
+  }
+
+  .bat-search-form {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+  }
+
+  .bat-search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: yellow;
+    box-shadow: 0 0 10px yellow inset;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .bat-search-input:focus {
+    box-shadow: 0 0 20px #f1c40f inset, 0 0 15px yellow;
+    background-color: #000;
+    transform: scale(1.03);
+  }
+
+  .bat-search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #f1c40f;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 0 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .bat-search-button:hover {
+    background-color: #ffdd00;
+    box-shadow: 0 0 10px yellow;
+  }
+  #batmanBanner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: yellow;
+  padding: 10px 25px;
+  font-size: 28px;
+  font-family: 'Segoe UI', sans-serif;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  box-shadow: 0 0 20px yellow;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#batmanBanner.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+</style>
+</head>
+<body>
+<div id="batmanBanner" class="hidden-banner">🏨 HotelBatman</div>
+
+<div class="logo">
+    <img width=30 height=50 src="batmanlogo.jpg" alt="Batman Logo JPG">
+  </div>
+  <h1>HOTEL BATMAN</h1>
+ <div style="background:#0d0d0d; color:yellow; font-family:'Segoe UI', sans-serif; font-size:15px; padding:10px 20px; text-align:center; border-bottom:2px solid yellow; position:relative; z-index:999;">
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px; align-items:center;">
+    <span style="cursor:pointer;" onmouseover="this.style.color='#39ff14'" onmouseout="this.style.color='yellow'">🦇 Become a Gotham Member - Extra 10% Off</span>
+    <span style="cursor:pointer;" onmouseover="this.style.color='#39ff14'" onmouseout="this.style.color='yellow'">🏢 Wayne for Business - Trusted by 5000+ Enterprises</span>
+    <span style="cursor:pointer;" onmouseover="this.style.color='#39ff14'" onmouseout="this.style.color='yellow'">🏨 List Your Batcave - Start Earning</span>
+    <span style="cursor:pointer;" onmouseover="this.style.color='#39ff14'" onmouseout="this.style.color='yellow'">📞 Call Alfred: 0124-6201611</span>
+    <span style="cursor:pointer;" onmouseover="this.style.color='#39ff14'" onmouseout="this.style.color='yellow'">🌐 Language: English</span>
+    <span style="cursor:pointer;" onmouseover="this.style.color='#39ff14'" onmouseout="this.style.color='yellow'">🔐 Login / Signup</span>
+  </div>
+</div>
+<nav>
+  <ul>
+    <li>
+      <a href="#">🏠 Home ▾</a>
+      <ul>
+        <li><a href="#about">📖 About Us</a></li>
+        <li><a href="#welcome">🫡 Welcome Note</a></li>
+        <li><a href="#services">🛎️ What We Offer</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">🍽️ Food ▾</a>
+      <ul>
+        <li><a href="#breakfast">🥞 Breakfast</a></li>
+        <li><a href="#lunch">🍛 Lunch</a></li>
+        <li><a href="#dinner">🍝 Dinner</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">🛎️ Services ▾</a>
+      <ul>
+        <li><a href="#laundry">🧺 Laundry</a></li>
+        <li><a href="#cleaning">🧹 Room Cleaning</a></li>
+        <li><a href="#delivery">📦 Room Delivery</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">📸 Gallery ▾</a>
+      <ul>
+        <li><a href="#interior">🏨 Interior</a></li>
+        <li><a href="#foodgallery">🍽️ Food</a></li>
+        <li><a href="#events">🎉 Events</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">🛏️ Booking ▾</a>
+      <ul>
+        <li><a href="#rooms">🛌 Rooms</a></li>
+        <li><a href="#packages">🎁 Packages</a></li>
+        <li><a href="#offers">💸 Offers</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">📞 Contact ▾</a>
+      <ul>
+        <li><a href="#call">📱 Call Us</a></li>
+        <li><a href="#email">📧 Email</a></li>
+        <li><a href="#location">📍 Location</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<br>
+<!-- 🔍 Batman Hotel Booking Panel - with labels -->
+<div style="background-color: #000; padding: 40px 20px; text-align: center;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+
+    <!-- City Input -->
+    <input type="text" placeholder="City / Location" 
+      style="padding: 15px 20px; border: 2px solid yellow; border-radius: 30px; background: #111; color: yellow; font-size: 16px; width: 200px; outline: none;">
+
+    <!-- Date -->
+    <input type="date" title="Select Check-in Date"
+      style="padding: 15px 20px; border: 2px solid yellow; border-radius: 30px; background: #111; color: yellow; font-size: 16px; width: 200px; outline: none;">
+
+    <!-- Time -->
+    <input type="time" title="Check-in Time"
+      style="padding: 15px 20px; border: 2px solid yellow; border-radius: 30px; background: #111; color: yellow; font-size: 16px; width: 200px; outline: none;"
+      placeholder="Time">
+
+    <!-- Rooms Count -->
+    <div style="display: flex; align-items: center; background: #111; border: 2px solid yellow; border-radius: 30px; padding: 0 15px;">
+      <span style="color: yellow; margin-right: 10px;">Rooms</span>
+      <button onclick="changeCount('rooms', -1)" style="background: none; border: none; color: yellow; font-size: 20px;">−</button>
+      <input id="rooms" type="text" value="1" readonly style="width: 40px; text-align: center; background: none; border: none; color: yellow; font-size: 16px;">
+      <button onclick="changeCount('rooms', 1)" style="background: none; border: none; color: yellow; font-size: 20px;">+</button>
+    </div>
+
+    <!-- Persons Count -->
+    <div style="display: flex; align-items: center; background: #111; border: 2px solid yellow; border-radius: 30px; padding: 0 15px;">
+      <span style="color: yellow; margin-right: 10px;">Persons</span>
+      <button onclick="changeCount('persons', -1)" style="background: none; border: none; color: yellow; font-size: 20px;">−</button>
+      <input id="persons" type="text" value="1" readonly style="width: 40px; text-align: center; background: none; border: none; color: yellow; font-size: 16px;">
+      <button onclick="changeCount('persons', 1)" style="background: none; border: none; color: yellow; font-size: 20px;">+</button>
+    </div>
+
+    <!-- Search Button -->
+    <button style="padding: 15px 25px; border-radius: 30px; background-color: yellow; color: black; font-weight: bold; border: none; font-size: 16px; cursor: pointer;">
+      Search Deals 🦇
+    </button>
+  </div>
+</div>
+
+<!-- Count Control Script -->
+<script>
+  function changeCount(id, delta) {
+    const input = document.getElementById(id);
+    let value = parseInt(input.value);
+    if ((value <= 1 && delta < 0) || (value >= 10 && delta > 0)) return;
+    input.value = value + delta;
+  }
+</script>
+
+
+
+
+
+<section class="split-offers">
+  <div class="batman-offer">
+    <h2>🦇 Dark Knight Deal</h2>
+    <p>Stay 2 Nights — Get 1 Night Free in the <strong>Batcave Suite</strong></p>
+    <p>Use Code: <span>GOTHAM2025</span></p>
+    <a href="#booking">🛎️ Book Now</a>
+  </div>
+  <div class="joker-offer">
+    <h2>🃏 Joker’s Madness</h2>
+    <p>Book the <strong>Joker Suite</strong> & Get FREE Chaos Snacks 🍿</p>
+    <p>Use Code: <span>HA-HAA25</span></p>
+    <a href="#booking">🎭 Claim Chaos</a>
+  </div>
+</section>
+
+<section id="gallery-section">
+  <h2>🖼️ Explore the Bat Gallery</h2>
+<div class="gallery">
+  <img src="bat spa.jpg" alt="Bat Spa">
+  <div class="desc">Relaxation in BatSpa</div>
+</div>
+
+<div class="gallery">
+  <img src="waynehall.jpg" alt="Wayne Hall">
+  <div class="desc">Wayne Conference Hall</div>
+</div>
+
+<div class="gallery">
+  <img src="batpool.jpg" alt="Batpool">
+  <div class="desc">Gotham Night Pool</div>
+</div>
+  <div class="gallery">
+    <img src="batcave.jpg" alt="Batcave Room">
+    <div class="desc">Batcave Suite</div>
+  </div>
+
+  <div class="gallery">
+    <img src="batdining.jpg" alt="Dining">
+    <div class="desc">Dark Dining Hall</div>
+  </div>
+
+  <div class="gallery">
+    <img src="jokerlounge.jpg" alt="Joker Lounge">
+    <div class="desc">Joker’s Lounge</div>
+  </div>
+
+  <div class="gallery">
+    <img src="rooftop.jpg" alt="Rooftop View">
+    <div class="desc">Gotham Rooftop</div>
+  </div>
+</section><br><br>
+
+<div style="clear: both; padding: 50px 0; background: black;">
+  <h2 style="text-align: center; color: yellow; font-size: 36px; font-family: 'Segoe UI', sans-serif;">
+    🦇 Welcome to Batman Hotel
+  </h2>
+</div>
+<div style="max-width: 900px; margin: auto; font-size: 18px; line-height: 1.8; background-color: #111; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px #f1c40f;">
+    <p>
+      Hidden in the shadows of Gotham, The Batman Hotel is more than just a place to stay — it's a symbol of strength, mystery, and elegance. Designed for the vigilantes of the night and the dreamers of the day, this hotel embodies the spirit of The Dark Knight.
+    </p>
+    <p>
+      From our Batcave-inspired suites to our rooftop view of Gotham’s skyline, each corner of the hotel is a tribute to justice, style, and luxury. Whether you're a silent guardian or just escaping your past, you've found your sanctuary.
+    </p>
+    <p style="text-align: center; margin-top: 25px;">
+      <strong>“Because even heroes need rest.”</strong>
+    </p>
+  </div>
+</section>
+
+<div style="clear: both;"></div>
+<<div style="background-color:#111; padding:30px; border:2px solid yellow; border-radius:12px; max-width:400px; margin:auto; text-align:center; box-shadow:0 0 20px yellow; font-family:'Segoe UI',sans-serif;">
+
+  <img src="batmanlogo.jpg" alt="Batman Logo" style="width:60px; filter:drop-shadow(0 0 8px yellow); margin-bottom:15px;">
+
+  <h3 style="color:yellow; font-size:24px; margin-bottom:10px;">🦇 Get Access to Exclusive Bat Deals!</h3>
+  <p style="color:#ccc; font-size:15px; margin-bottom:20px;">Enter your Batmail below and stay notified about secret offers from Gotham's finest hotel.</p>
+
+  <form>
+    <input type="email" placeholder="you@batmail.com" style="padding:10px; width:90%; border:none; border-radius:6px; margin-bottom:15px; background:#222; color:white;"><br>
+    
+    <button 
+      type="submit"
+      style="padding:10px 20px; background:yellow; color:black; font-weight:bold; border:none; border-radius:8px; cursor:pointer; box-shadow:0 0 10px #f1c40f; transition:all 0.3s ease;"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 20px orange';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px #f1c40f';"
+    >📩 Get My Deal</button>
+  </form>
+
+</div>
+ 
+
+
+<section class="location-section" id="location" style="display:flex; flex-wrap:wrap; align-items:center; gap:30px; padding:40px;">
+  <iframe style="flex:1; min-width:300px; filter:contrast(150%) brightness(80%) drop-shadow(0 0 10px yellow); border: 2px solid yellow; border-radius: 10px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20048.82611376466!2d-97.06591084684662!3d32.74899066161296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e87a977a01e13%3A0x62cec8f4c32bcc76!2sGotham%20City!5e0!3m2!1sen!2sus!4v1752589030774!5m2!1sen!2sus" width="600" height="650" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+
+  <div class="login-form" id="batFormContainer" style="flex:1; min-width:300px; background-color:#1a1a1a; padding:30px; border-radius:10px; box-shadow:0 0 20px yellow; transition: background-color 0.5s ease;">
+    <h2 style="color:yellow; text-align:center; margin-bottom:20px;">🦇 Access the Batcave</h2>
+    <form action="" method="post" id="authForm">
+      <label for="username" style="display:block; margin-bottom:8px; color:#ccc;">🧑‍💼 Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your name" style="width:100%; padding:10px; margin-bottom:15px; border:none; border-radius:5px; background-color:#333; color:white;">
+
+      <label for="email" style="display:block; margin-bottom:8px; color:#ccc;">📧 Email</label>
+      <input type="email" id="email" name="email" placeholder="you@batmail.com" style="width:100%; padding:10px; margin-bottom:15px; border:none; border-radius:5px; background-color:#333; color:white;">
+
+      <label for="password" style="display:block; margin-bottom:8px; color:#ccc;">🔐 Password</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" style="width:100%; padding:10px; margin-bottom:20px; border:none; border-radius:5px; background-color:#333; color:white;">
+
+      <button type="submit" style="width:100%; padding:12px; background-color:yellow; color:black; font-weight:bold; border:none; border-radius:8px; cursor:pointer;" id="formButton">🦇 Login to Batverse</button>
+
+      <p style="margin-top:15px; text-align:center; color:#ccc;">
+        <a href="#" onclick="toggleForm(event)" style="color:yellow; text-decoration:underline;">Need to Sign Up?</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<script>
+function toggleForm(event) {
+  event.preventDefault();
+  const form = document.getElementById('authForm');
+  const button = document.getElementById('formButton');
+  const toggleLink = event.target;
+  const formContainer = document.getElementById('batFormContainer');
+
+  if (button.innerText.includes('Login')) {
+    button.innerText = '🦇 Create Bat Account';
+    toggleLink.innerText = 'Already have an account? Login';
+    formContainer.style.backgroundColor = '#000033'; // deep bat blue
+  } else {
+    button.innerText = '🦇 Login to Batverse';
+    toggleLink.innerText = 'Need to Sign Up?';
+    formContainer.style.backgroundColor = '#1a1a1a';
+  }
+}
+</script>
+
+
+<footer style="background-color:#0d0d0d; color:yellow; text-align:center; padding:40px 20px; border-top:2px solid yellow; margin-top:60px; font-family:'Segoe UI', sans-serif;">
+    <h2 style="margin-bottom:10px; font-size:28px; letter-spacing:2px;">🦇 HOTEL BATMAN</h2>
+    <p style="font-size:16px; color:#ccc;">📍 Bat Street, Batman City, Night Zone</p>
+    <p style="font-size:15px; color:#ccc;">📞 +91 7010607826 | ✉️ <a href="mailto:Batman05@gmail.com" style="color:yellow; text-decoration:none;">Batman05@gmail.com</a></p>
+
+    <div style="margin:25px 0; display:flex; justify-content:center; flex-wrap:wrap; gap:15px;">
+      <a href="https://www.thebatman.com/" target="_blank" style="color:black; background:yellow; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">🌐 Website</a>
+      <a href="https://wa.me/917010607826?text=I'm+BATMAN" target="_blank" style="color:black; background:yellow; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">💬 WhatsApp</a>
+      <a href="https://www.facebook.com/batman/" target="_blank" style="color:black; background:yellow; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">📘 Facebook</a>
+      <a href="https://www.instagram.com/batman" target="_blank" style="color:black; background:yellow; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">📷 Instagram</a>
+      <a href="https://youtu.be/yngKXEBALE0" target="_blank" style="color:black; background:yellow; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">📽️ YouTube</a>
+    </div>
+
+    <p style="font-size:15px; margin-top:30px; color:#aaa;">🦸 Join the League of Legendary Hosts — Partner with Hotel Batman!</p>
+    <p style="margin-top:10px;">
+      <a href="#" style="background:yellow; color:black; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:bold;">🏙️ List Your Bat Property</a>
+    </p>
+    <p style="margin-top:30px; font-size:13px; color:#555;">Built by justice, powered by darkness. Welcome to your ultimate hero hideout.</p>
+    <p style="margin-top:15px; font-size:13px; color:#444;">&copy; 2025 Hotel Batman. All rights reserved.</p>
+<div style="text-align: center; padding: 30px 10px; background: #111; border-top: 2px solid yellow;">
+  <h3 style="color: yellow; font-size: 24px; margin-bottom: 15px;">🦇 Get the Batman Hotel App</h3>
+  <p style="color: white; font-size: 16px; margin-bottom: 20px;">Book faster. Manage your stays. Unlock secret deals!</p>
+
+  <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+<a href="#" target="_blank" style="text-decoration: none;">
+      <div style="display: flex; align-items: center; background: black; border: 2px solid yellow; border-radius: 10px; padding: 10px 20px; color: yellow; font-weight: bold; font-size: 16px; transition: 0.3s;">
+       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14"><g fill="none"><path fill="#10c414" d="m6.862 6.86l2.37 2.367l-6.94 3.526a1.03 1.03 0 0 1-1.161-.157zM2.293.97a1.03 1.03 0 0 0-1.162.157L6.863 6.86l2.363-2.368z"/><path fill="#1559cd" d="M.859 11.981V1.741a.83.83 0 0 1 .245-.588a.037.037 0 0 1 .051.001l5.707 5.707l-5.703 5.703a.044.044 0 0 1-.06.001a.83.83 0 0 1-.24-.584M12.37 6.09c.662.336.662 1.207 0 1.543l-3.11 1.58a.045.045 0 0 1-.054-.008L6.862 6.861L9.203 4.52a.05.05 0 0 1 .06-.008z"/><path stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" d="m9.23 9.23l-8.1-8.101m8.1 3.364l-8.1 8.1m-.271-.612V1.741c0-.672.79-1.098 1.434-.771L12.37 6.09c.662.336.662 1.207 0 1.543l-10.077 5.12c-.644.327-1.434-.099-1.434-.772" stroke-width="1"/></g></svg>
+        Get it on Play Store
+      </div>
+    </a>
+    <a href="#" target="_blank" style="text-decoration: none;">
+      <div style="display: flex; align-items: center; background: black; border: 2px solid yellow; border-radius: 10px; padding: 10px 20px; color: yellow; font-weight: bold; font-size: 16px; transition: 0.3s;">
+     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><defs><linearGradient id="logosAppleAppStore0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#17c9fb"/><stop offset="100%" stop-color="#1a74e8"/></linearGradient></defs><path fill="url(#logosAppleAppStore0)" d="M56.064 0h143.872C230.9 0 256 25.1 256 56.064v143.872C256 230.9 230.9 256 199.936 256H56.064C25.1 256 0 230.9 0 199.936V56.064C0 25.1 25.1 0 56.064 0"/><path fill="#fff" d="m82.042 185.81l.024.008l-8.753 15.16c-3.195 5.534-10.271 7.43-15.805 4.235s-7.43-10.271-4.235-15.805l6.448-11.168l.619-1.072c1.105-1.588 3.832-4.33 9.287-3.814c0 0 12.837 1.393 13.766 8.065c0 0 .126 2.195-1.351 4.391m124.143-38.72h-27.294c-1.859-.125-2.67-.789-2.99-1.175l-.02-.035l-29.217-50.606l-.038.025l-1.752-2.512c-2.872-4.392-7.432 6.84-7.432 6.84c-5.445 12.516.773 26.745 2.94 31.046l40.582 70.29c3.194 5.533 10.27 7.43 15.805 4.234c5.533-3.195 7.43-10.271 4.234-15.805l-10.147-17.576c-.197-.426-.539-1.582 1.542-1.587h13.787c6.39 0 11.57-5.18 11.57-11.57s-5.18-11.57-11.57-11.57m-53.014 15.728s1.457 7.411-4.18 7.411H48.092c-6.39 0-11.57-5.18-11.57-11.57s5.18-11.57 11.57-11.57h25.94c4.188-.242 5.18-2.66 5.18-2.66l.024.012l33.86-58.648l-.01-.002c.617-1.133.103-2.204.014-2.373l-11.183-19.369c-3.195-5.533-1.299-12.61 4.235-15.804s12.61-1.3 15.805 4.234l5.186 8.983l5.177-8.967c3.195-5.533 10.271-7.43 15.805-4.234s7.43 10.27 4.235 15.804l-47.118 81.61c-.206.497-.269 1.277 1.264 1.414h28.164l.006.275s16.278.253 18.495 15.454"/></svg>
+        Download on App Store
+      </div>
+    </a>
+  </div>
+</div>
+
+  </footer>
+ 
+
+<script>
+  window.addEventListener('scroll', function () {
+    const banner = document.getElementById('batmanBanner');
+    if (window.scrollY > 100) {
+      banner.classList.add('visible');
+    } else {
+      banner.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>
+
